@@ -12,6 +12,7 @@ public class ClassService {
 
     public String information(){
         String information = new Gson().toJson(classRepo.findAll());
+        information = information.replace("\\n\\t", "");
         return information;
     }
 }
